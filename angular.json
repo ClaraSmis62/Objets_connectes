@@ -98,8 +98,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Ampoule_connecte:build:production",
+            "firebaseProject": "ampoule-connectee",
+            "firebaseHostingSite": "ampoule-connectee"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

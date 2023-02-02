@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ampoule-connectee": {
+      "hosting": {
+        "Ampoule_connecte": [
+          "ampoule-connectee"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ampoule-connectee"
+  }
+}
