@@ -1,15 +1,1 @@
-<div *ngFor="let h of history">
-    <span>
-      Date : {{h.Date}}, Niveau de luminosité : {{h.Luminosite}}, Mode : {{h.Mode}}
-    </span>
-    <br/>
-  </div>
-  <div>
-    <ngx-gauge *ngIf="current" 
-    label = "Niveau d'intensité" 
-    [value]="current.Luminosite ?? 0"  
-    [min] = 0 [max] = 3 
-    [thick] = "10" [size] = "300"
-    [markers] = "marqueurConfig"> </ngx-gauge>
-  </div>
-
+<router-outlet></router-outlet>

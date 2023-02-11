@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 上下文类</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+    <body>
+      <h1 class="display-3" style="position: relative;left: 600px;">Consomation</h1>
+      <table class="table">
+
+        <thead>
+          <tr>
+            <th>Date début</th>
+            <th>Date Fin</th>
+            <th>Durée (h)</th>
+            <th>Consomation (kwh/1000000)</th>
+            <th>Prix(euro/1000000)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="item && item.length > 0">
+            <tr *ngFor="let i of item" [ngClass]="{'success': (i.Duree || 0) < 0.5, 'active': (i.Duree || 0) >= 0.5 && (i.Duree || 0) < 1, 'warning': (i.Duree || 0) >= 1 && (i.Duree || 0) < 2, 'danger': (i.Duree || 0) >= 2}">
+              <td>{{ i.DateDebut }}</td>
+              <td>{{ i.DateFin }}</td>
+              <td>{{i.Duree }}</td>
+              <td>{{i.Consommation }}</td>
+              <td>{{i.Prix }}</td>
+            </tr>
+            
+        </ng-container>
+        </tbody>
+      </table>
+
+    </body>
+</html>

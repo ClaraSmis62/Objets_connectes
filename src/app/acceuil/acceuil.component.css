@@ -1,0 +1,225 @@
+     /* CSS styles */
+
+
+     button {
+        display: inline-block;
+        background-color: #B1C1F8;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #f7c2f9;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      
+      h1 {
+      color: black;
+      font-size: 36px;
+      text-align: center;
+      }
+      h2 {position: absolute;
+      width: 141px;
+      height: 24px;
+      left: 170px;
+      top: 300px;
+      
+      font-family: 'Kanit';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 16px;
+      /* or 80% */
+      
+      text-align: center;
+      
+      color: #000000;
+      }
+      
+      h3{
+      position: absolute;
+      width: 183px;
+      height: 42px;
+      left: 738px;
+      top: 200px;
+      
+      font-family: 'Kanit';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 16px;
+      /* or 67% */
+      
+      text-align: center;
+      
+      color: #000000;
+      }
+      
+      h4.dernierAllumage{
+      position: absolute;
+      width: 230px;
+      height: 38px;
+      left: 795px;
+      top: 375px;
+      
+      font-family: 'Kanit';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 16px;
+      color: #000000;
+      }
+      h4.time_text{
+        position: absolute;
+        width: 500px;
+        height: 38px;
+        left: 1000px;
+        top: 480px;
+        
+        font-family: 'Kanit';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 16px;
+        color: #000000;
+        }
+        h4.cloud_text{
+          position: absolute;
+          width: 500px;
+          height: 38px;
+          left: 1220px;
+          top: 610px;
+          font-family: 'Kanit';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 16px;
+          color: #000000;
+          }
+          h4.visibilite_text{
+            position: absolute;
+            width: 500px;
+            height: 38px;
+            left: 1200px;
+            top: 700px;
+            font-family: 'Kanit';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 16px;
+            color: #000000;
+            }
+        h4.temps{
+          position: absolute;
+          width: 230px;
+          height: 38px;
+          left: 795px;
+          top: 480px;
+          
+          font-family: 'Kanit';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 16px;
+          color: #000000;
+          }
+        h4.taux{
+          position: absolute;
+          width: 230px;
+          height: 38px;
+          left: 795px;
+          top: 600px;
+          
+          font-family: 'Kanit';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 16px;
+          color: #000000;
+          }
+        h4.visibilite{
+            position: absolute;
+            width: 230px;
+            height: 38px;
+            left: 795px;
+            top: 700px;
+            
+            font-family: 'Kanit';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 16px;
+            color: #000000;
+            }
+      
+      
+      
+      button.btn {
+        display: inline-block;
+        background-color: #B1C1F8;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 20px;
+        padding: 10px;
+        width: 150px;
+        height:45px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        vertical-align: middle;
+      }
+      button.btn span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button.btn span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button.btn:hover {
+        background-color: #f7c2f9;
+      }
+      button.btn:hover span {
+        padding-right: 25px;
+      }
+      button.btn:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      
+      
