@@ -8,9 +8,9 @@ describe('PageHistoriqueComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageHistoriqueComponent ]
+      declarations: [PageHistoriqueComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(PageHistoriqueComponent);
     component = fixture.componentInstance;

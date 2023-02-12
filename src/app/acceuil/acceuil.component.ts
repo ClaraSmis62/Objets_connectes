@@ -7,7 +7,7 @@ import {
 import { map, Observable } from 'rxjs';
 import { ampouleConnectee } from '../models';
 
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-acceuil',
@@ -23,7 +23,8 @@ export class AcceuilComponent implements OnInit {
   public accurateTime = new Date(new Date(this.utcTime).getTime() + this.oneHour);
   public time = this.accurateTime.toUTCString();
 
-  public modeInfo = 1;
+  public modeInfo: ampouleConnectee["Mode"] | null;
+
   public dataMeteo: any;
   private historyRef: AngularFireList<ampouleConnectee>;
   public history?: ampouleConnectee[];
@@ -32,15 +33,12 @@ export class AcceuilComponent implements OnInit {
   public cloudCover = 20;
   public visibility = 20;
 
-
-
-
   constructor(
     private router: Router,
     db: AngularFireDatabase
 
   ) {
-    this.historyRef = db.list<ampouleConnectee>('/history');
+    this.historyRef = db.list<ampouleConnectee>('/variables');
 
   }
 
@@ -68,30 +66,31 @@ export class AcceuilComponent implements OnInit {
       // noaa :National Oceanic and Atmospheric Administration
       console.log("Visuanility", jsonData.hours[0].visibility.noaa);
 
-      this.cloudCover = jsonData.hours[0].cloudCover.dwd ;
+      this.cloudCover = jsonData.hours[0].cloudCover.dwd;
       this.visibility = jsonData.hours[0].visibility.noaa;
     });
 
   }
 
-
   ngOnInit(): void {
-    
+
     this.historyRef
       .snapshotChanges()
       .pipe(map((changes) => changes.map((c) => ({ ...c.payload.val() }))))
       .subscribe((data) => {
         this.history = data;
         this.current = data[data.length - 1];
+        this.modeInfo = this.current.Mode;
       })
 
-
+    this.changement_mode();
   }
-  
   changement_mode() {
-    if (this.modeInfo != 0)
+    console.log("test");
+    if (this.modeInfo != 0) {
       this.Mode = this.modeInfo;
-    console.log(this.Mode);
+    }
+    this.modeInfo = 0;
   }
 
   marqueurConfig = {

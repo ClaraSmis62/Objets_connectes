@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import {AngularFireDatabase,AngularFireList,} from '@angular/fire/compat/database';
+import { AngularFireDatabase, AngularFireList, } from '@angular/fire/compat/database';
 import { map, Observable } from 'rxjs';
 import { ampouleConnectee } from '../models';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModel } from '@angular/forms';
-import {HttpClient,HttpHeaders,HttpClientModule} from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
@@ -17,7 +17,7 @@ import { BrowserModule } from '@angular/platform-browser';
 export class PageHistoriqueComponent implements OnInit {
   title = 'Ampoule_connectee';
   public showInfo = 1;
-  public dataMeteo :any;
+  public dataMeteo: any;
   private historyRef: AngularFireList<ampouleConnectee>;
   public history?: ampouleConnectee[];
   public current?: ampouleConnectee | null;
@@ -27,17 +27,18 @@ export class PageHistoriqueComponent implements OnInit {
     private route: ActivatedRoute,
     db: AngularFireDatabase
   ) {
-    this.historyRef = db.list<ampouleConnectee>('/history');
+    this.historyRef = db.list<ampouleConnectee>('/variables');
   }
 
   ngOnInit(): void {
     this.historyRef
-    .snapshotChanges()
-    .pipe(map((changes) => changes.map((c) => ({ ...c.payload.val() }))))
-    .subscribe((data) => {
-      this.history = data;
-      this.current = data[data.length - 1];
-    })
+      .snapshotChanges()
+      .pipe(map((changes) => changes.map((c) => ({ ...c.payload.val() }))))
+      .subscribe((data) => {
+        this.history = data;
+        this.current = data[data.length - 1];
+      })
+    console.log(this.history);
   }
 
 }
